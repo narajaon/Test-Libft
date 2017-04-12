@@ -1,54 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/12 16:46:42 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 18:48:58 by narajaon         ###   ########.fr       */
+/*   Created: 2017/04/12 19:13:22 by narajaon          #+#    #+#             */
+/*   Updated: 2017/04/12 19:23:32 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-/*
-char	ft_up(unsigned int i, char c)
-{
-	char a;
 
-	a = c;
-	if (i % 2)
-		a = c - 32;
-	return (a);
-}
-*/
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+char	*ft_strjoin(char const *s1, char const *s2)
 {
 	char *str;
 	char *ptr;
-	int i;
 
-	i = 0;
-	str = ft_strnew(ft_strlen(s));
-	ptr = (char *)s;
-	while (ptr[i])
-	{
-		str[i] = f(i, ptr[i]);
-		i++;
-	}
+	if (!(str = ft_strnew(ft_strlen(s1) + ft_strlen(s2))))
+		return (NULL);
+	ptr = str;
+	while (*s1)
+		*ptr++ = *s1++;
+	while (*s2)
+		*ptr++ = *s2++;
 	return (str);
 }
 /*
 int		main()
 {
-	char str[] = "testtestoewqrqwrrtewtwetwetwet";
-	char *ptr;
-	char (*f)(unsigned int, char);
+	char str1[] = "debutaewrqmilieu";
+	char str2[] = "+1aawefinwrewqeqrrqrq";
 
-	f = ft_up;
-	ptr = ft_strmapi(str, f);
-	printf("tes %s\n", str);
-	printf("re  %s", ptr);
+	printf("%s", ft_strjoin(str1, str2));
 	return (0);
 }
 */

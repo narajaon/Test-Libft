@@ -1,37 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/12 10:55:28 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 17:56:01 by narajaon         ###   ########.fr       */
+/*   Created: 2017/04/12 19:23:48 by narajaon          #+#    #+#             */
+/*   Updated: 2017/04/12 19:28:06 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strnew(size_t size)
+char	*ft_strtrim(char const *s)
 {
-	char *str;
-	size_t i;
 
-	i = 0;
-	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i < size)
-		str[i++] = '\0';
-	str[i] = '\0';
-	return (str);
 }
-/*
+
 int		main()
 {
-	char *str;
-
-	str = ft_strnew(20);
-	printf("%s", str);
 	return (0);
 }
-*/
