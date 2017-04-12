@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 18:21:28 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 09:36:09 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/12 11:26:42 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+
+/*Part 1*/
 
 void	ft_bzero(void *s, size_t n);
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n);
@@ -45,4 +47,24 @@ int		ft_isprint(int c);
 int		ft_toupper(int c);
 int		ft_tolower(int c);
 int		ft_atoi(const char *str);
+
+/*Part 2*/
+
+void	*ft_memalloc(size_t size);
+void	ft_memdel(void **ap);
+char	*ft_strnew(size_t size);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 #endif
