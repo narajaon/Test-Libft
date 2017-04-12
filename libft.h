@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 18:21:28 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 11:26:42 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/12 17:44:37 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,13 +53,13 @@ int		ft_atoi(const char *str);
 void	*ft_memalloc(size_t size);
 void	ft_memdel(void **ap);
 char	*ft_strnew(size_t size);
-
-
-
-
-
-
-
+void	ft_strdel(char **as);
+void	ft_strclr(char *s);
+void	ft_striter(char *s, void (*f)(char *));
+void	ft_striteri(char *s, void (*f)(unsigned int, char *));
+char	*ft_strmap(char const *s, char (*f)(char));
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char));
+int		ft_strequ(char const *s1, char const *s2);
 
 
 

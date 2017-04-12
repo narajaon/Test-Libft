@@ -1,36 +1,54 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnew.c                                        :+:      :+:    :+:   */
+/*   ft_strmapi.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/12 10:55:28 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 17:49:12 by narajaon         ###   ########.fr       */
+/*   Created: 2017/04/12 16:46:42 by narajaon          #+#    #+#             */
+/*   Updated: 2017/04/12 17:05:17 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
+/*
+char	ft_up(unsigned int i, char c)
+{
+	char a;
 
-char	*ft_strnew(size_t size)
+	a = c;
+	if (i % 2)
+		a = c - 32;
+	return (a);
+}
+*/
+char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char *str;
-	size_t i;
+	char *ptr;
+	int i;
 
 	i = 0;
-	if (!(str = (char *)malloc(sizeof(char) * (size + 1))))
-		return (NULL);
-	while (i < size)
-		str[i++] = '\0';
-	str[i] = '\0';
+	str = ft_strnew(ft_strlen(s));
+	ptr = (char *)s;
+	while (ptr[i])
+	{
+		str[i] = f(i, ptr[i]);
+		i++;
+	}
 	return (str);
 }
 /*
 int		main()
 {
-	char *str;
+	char str[] = "testtestoewqrqwrrtewtwetwetwet";
+	char *ptr;
+	char (*f)(unsigned int, char);
 
-	str = ft_strnew(20);
-	printf("%s", str);
+	f = ft_up;
+	ptr = ft_strmapi(str, f);
+	printf("tes %s\n", str);
+	printf("re  %s", ptr);
 	return (0);
-}*/
+}
+*/

@@ -1,23 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/03/09 12:21:38 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 17:37:08 by narajaon         ###   ########.fr       */
+/*   Created: 2017/04/12 14:15:31 by narajaon          #+#    #+#             */
+/*   Updated: 2017/04/12 14:27:49 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-
-int		ft_strlen(const char *str)
+/*
+void	ft_up(unsigned int i, char *c)
 {
+	if (i % 2)
+		*c = *c - 32;
+}
+*/
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
+{
+	char *ptr;
 	int i;
 
+	ptr = s;
 	i = 0;
-	while (str[i])
-		i++;
-	return (i);
+	while (*ptr)
+		f(i++, &*ptr++);
 }
+/*
+int		main()
+{
+	char str[] = "yafarewtryrytuytittyru";
+	void (*f)(unsigned int, char *);
+
+	f = ft_up;
+	ft_striteri(str, f);
+	printf("%s", str);
+	return (0);
+}
+*/
