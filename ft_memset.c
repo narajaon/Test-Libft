@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 16:09:02 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/11 19:39:20 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/13 15:58:09 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,14 @@
 
 void	*ft_memset(void *b, int c, size_t len)
 {
-	unsigned char	c_;
-	char			b_[len];
-	char			*b__;
-	size_t			i;
-	size_t			j;
+	unsigned char *ptr;
 
-	i = 0;
-	j = 0;
-	c_ = c;
-	b__ = b;
-	while (i < len)
+	ptr = b;
+	while (len)
 	{
-		b_[i] = c_;
-		i++;
+		*ptr++ = (unsigned char)c;
+		len--;
 	}
-	while (b__[j])
-	{
-		b_[i + j] = b__[j];
-		j++;
-	}
-	b_[i + j] = '\0';
-	b = b_;
 	return (b);
 }
 /*
@@ -44,7 +30,8 @@ int		main()
 	char str[10] = "bcser";
 	char str2[10] = "bcser";
 
-	printf("ft %s", ft_memset(str, '5', 10));
-	printf("ft %s", memset(str2, '5', 10));
+	printf("ft %s\n", ft_memset(str, 'A', 9));
+	printf("re %s", memset(str2, 'A', 9));
 	return (0);
-}*/
+}
+*/
