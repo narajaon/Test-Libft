@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/13 14:50:40 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 19:05:31 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 10:05:16 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,17 +28,18 @@ static int		check_len(const char *str, const char *to_find)
 	return (0);
 }
 
-static int		check_str(const char *str, const char *to_find, int len)
+static int		check_str(const char *str, const char *to_find, int len, int n)
 {
 	int i;
 	int j;
 
 	i = 0;
 	j = 0;
-	while (str[i] == to_find[j] && str[i] && to_find[j])
+	while (str[i] == to_find[j] && str[i] && to_find[j] && n)
 	{
 		i++;
 		j++;
+		n--;
 	}
 	if (j == len)
 		return (1);
@@ -58,9 +59,9 @@ char			*ft_strnstr(const char *str, const char *to_find, size_t n)
 		return ((char *)str);
 	while (to_find[len])
 		len++;
-	while (n && *str)
+	while (n)
 	{
-		if (check_str(str, to_find, len))
+		if (check_str(str, to_find, len, n))
 			return ((char *)str);
 		str++;
 		n--;

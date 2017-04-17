@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 17:22:50 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 17:31:21 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 10:04:53 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,12 +26,3 @@ int		ft_strnequ(char const *s1, char const *s2, size_t n)
 	}
 	return (1);
 }
-/*
-int		main()
-{
-	char str1[] = "abcde";
-	char str2[] = "abcdef";
-	printf("%d", ft_strnequ(str1, str2, 5));
-	return (0);
-}
-*/

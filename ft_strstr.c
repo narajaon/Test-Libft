@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/13 14:11:28 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 18:57:02 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 11:04:16 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static int		check_str(const char *str, const char *to_find, int len)
 	return (0);
 }
 
-char	*ft_strstr(const char *str, const char *to_find)
+char			*ft_strstr(const char *str, const char *to_find)
 {
 	char	*temp;
 	int		len;

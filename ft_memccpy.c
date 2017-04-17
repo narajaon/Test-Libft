@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 19:11:04 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/11 19:38:46 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 09:57:45 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,13 +33,3 @@ void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 	}
 	return (NULL);
 }
-/*
-int		main()
-{
-	char str[10] = "";
-	char str2[] = "ahuert ke koukou";
-	//printf("%s\n", ft_memccpy(str, str2, 'x', 0));
-	printf("%s\n", memccpy(str, str2, 'x', 0));
-	printf("%s", str);
-	return (0);
-}*/

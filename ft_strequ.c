@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 17:05:36 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 17:25:56 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 10:03:08 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,12 +25,3 @@ int		ft_strequ(char const *s1, char const *s2)
 	}
 	return (1);
 }
-/*
-int		main()
-{
-	char str1[] = "a";
-	char str2[] = "a";
-	printf("%d", ft_strequ(str1, str2));
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 10:55:38 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 16:20:54 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 10:59:57 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,21 +19,10 @@ void	*ft_memchr(const void *s, int c, size_t n)
 	ptr = s;
 	while (n)
 	{
-		if (*ptr == c)
+		if ((unsigned char)*ptr == (unsigned char)c)
 			return ((void *)ptr);
 		ptr++;
 		n--;
 	}
-	return (NULL);
-}
-/*
-int		main()
-{
-	char str[] = "123erwe 45ewre";
-	char str2[] = "123erwe 45ewre";
-
-	printf("ft: %s\n", ft_memchr(str, '5', 3));
-	printf("re: %s", memchr(str2, '5', 3));
 	return (0);
 }
-*/

@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 19:13:22 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/12 19:23:32 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 10:04:02 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,3 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		*ptr++ = *s2++;
 	return (str);
 }
-/*
-int		main()
-{
-	char str1[] = "debutaewrqmilieu";
-	char str2[] = "+1aawefinwrewqeqrrqrq";
-
-	printf("%s", ft_strjoin(str1, str2));
-	return (0);
-}
-*/

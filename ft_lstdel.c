@@ -1,31 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strmapi.c                                       :+:      :+:    :+:   */
+/*   ft_lstdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/04/12 16:46:42 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/14 11:04:00 by narajaon         ###   ########.fr       */
+/*   Created: 2017/04/17 08:31:34 by narajaon          #+#    #+#             */
+/*   Updated: 2017/04/17 09:27:45 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
+void	ft_lstdel(t_list **ast, void (*del)(void *, size_t))
 {
-	char	*str;
-	char	*ptr;
-	int		i;
+	t_list *ptr;
+	t_list *ptr2;
 
-	i = 0;
-	if (!(str = ft_strnew(ft_strlen(s))))
-		return (NULL);
-	ptr = (char *)s;
-	while (ptr[i])
+	ptr = *ast;
+	ptr2 = NULL;
+	while (ptr)
 	{
-		str[i] = f(i, ptr[i]);
-		i++;
+		ptr2 = ptr->next;
+		del(ptr->content, ptr->content_size);
+		free(ptr);
+		ptr = ptr2;
 	}
-	return (str);
+	*ast = 0;
 }

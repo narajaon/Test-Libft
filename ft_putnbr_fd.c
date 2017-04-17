@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/13 14:14:40 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 14:16:46 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/17 10:52:25 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ void	ft_putnbr_fd(int nb, int fd)
 	}
 	if (nb < 0)
 	{
-		ft_putchar('-');
+		ft_putchar_fd('-', fd);
 		nb = -nb;
 	}
 	if (nb > 9)

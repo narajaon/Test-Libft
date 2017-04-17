@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/10 17:06:16 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 15:07:38 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 09:57:09 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,15 +27,3 @@ void	ft_bzero(void *s, size_t n)
 		i++;
 	}
 }
-/*
-int		main()
-{
-	char str[] = "abcasdawqwrqwe qwrqw qwrqw";
-	char str2[] = "abcasdawqwrqwe qwrqw qwrqw";
-
-	ft_bzero(str, 5);
-	printf("b %s\n", str);
-	bzero(str2, 5);
-	printf("f %s", str2);
-	return (0);
-}*/

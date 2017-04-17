@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/03/16 13:20:37 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 17:17:42 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 10:03:00 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,16 +28,3 @@ char			*ft_strdup(const char *src)
 	dup[i] = '\0';
 	return (dup);
 }
-/*
-#include <stdio.h>
-#include <string.h>
-
-int		main()
-{
-	char *str;
-	char str2[5] = "copy";
-	str = ft_strdup(str2);
-	//str = strdup(str2);
-	printf("%s", str);
-	return (0);
-}*/

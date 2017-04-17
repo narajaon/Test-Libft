@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 17:37:21 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 14:54:51 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 11:07:08 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 char	*ft_strsub(char const *s, unsigned int start, size_t len)
 {
-	char *str;
-	char *ptr;
-	int i;
+	char	*str;
+	char	*ptr;
+	int		i;
 
 	i = 0;
 	if (!(str = ft_strnew(len)))
@@ -29,13 +29,3 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 	}
 	return (str);
 }
-/*
-int		main()
-{
-	char str1[] = "a";
-	char *str2;
-
-	printf("%s", ft_strsub(str1, 3, 5));
-	return (0);
-}
-*/

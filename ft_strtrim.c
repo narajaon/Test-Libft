@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 19:23:48 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 15:56:44 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 14:03:56 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,36 +14,28 @@
 
 char	*ft_strtrim(char const *s)
 {
-	char *str;
-	char *ptr;
-	int i;
-	int i_2;
+	char	*str;
+	char	*ptr;
+	int		i;
+	int		i_2;
 
 	i = 0;
 	i_2 = 0;
-	if (!(str = ft_strnew(ft_strlen(s))))
-		return (NULL);
+	if (!*s)
+		return ((char *)s);
 	ptr = (char *)s;
 	while ((*ptr == ' ' || *ptr == '\n' || *ptr == '\t') && *ptr)
 		ptr++;
+	if (!*ptr)
+		return (ptr);
 	while (ptr[i])
 		i++;
 	i--;
 	while ((ptr[i] == ' ' || ptr[i] == '\n' || ptr[i] == '\t') && ptr[i])
 		i--;
-	while (i_2 <= i)
-	{
-		str[i_2] = ptr[i_2];
-		i_2++;
-	}
+	if (!(str = ft_strnew(i - i_2 + 1)))
+		return (NULL);
+	while (i_2++ <= i)
+		str[i_2 - 1] = ptr[i_2 - 1];
 	return (str);
 }
-/*
-int		main()
-{
-	char str[] = "\tarawr  awawe waeaw    ";
-
-	printf("res => %s", ft_strtrim(str));
-	return (0);
-}
-*/

@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/13 11:49:07 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 13:59:53 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 13:42:53 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,14 +35,15 @@ static char		*to_asci(char *str, long n)
 	return (str);
 }
 
-char	*ft_itoa(int n)
+char			*ft_itoa(int n)
 {
 	char *str;
 	long len;
 
 	len = (n < 0) ? -(long)n : (long)n;
 	len = base_len(len);
-	if(!(str = ft_strnew(len + 1)))
+	len = (n < 0) ? len + 1 : len;
+	if (!(str = ft_strnew(len)))
 		return (NULL);
 	if (n < 0)
 		str[0] = '-';
@@ -50,10 +51,3 @@ char	*ft_itoa(int n)
 	to_asci(str, len);
 	return (str);
 }
-/*
-int		main()
-{
-	printf("%s", ft_itoa(1234567));
-	return (0);
-}
-*/

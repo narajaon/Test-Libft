@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/13 09:22:12 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/13 14:36:46 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/14 11:17:37 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ static int		nb_word(char const *s, char c)
 		while ((s[i] != c) && s[i])
 			i++;
 		if (!s[i])
-			break;
+			break ;
 		i++;
 	}
 	return (count);
@@ -44,13 +44,13 @@ static int		word_len(char const *str, char c)
 	return (len);
 }
 
-char	**ft_strsplit(char const *s, char c)
+char			**ft_strsplit(char const *s, char c)
 {
-	char **tab;
-	int i;
-	int j;
-	int jc;
-	int word;
+	char	**tab;
+	int		i;
+	int		j;
+	int		jc;
+	int		word;
 
 	i = 0;
 	j = 0;
@@ -62,14 +62,9 @@ char	**ft_strsplit(char const *s, char c)
 		jc = 0;
 		while (s[i] == c)
 			i++;
-		if (!(tab[j] = (char *)malloc(sizeof(char *) * (word_len(s + i, c) + 1))))
-			return (NULL);
+		tab[j] = (char *)malloc(sizeof(char *) * (word_len(s + i, c) + 1));
 		while ((s[i] != c) && s[i])
-		{
-			tab[j][jc] = s[i];
-			i++;
-			jc++;
-		}
+			tab[j][jc++] = s[i++];
 		tab[j][jc] = '\0';
 		j++;
 		word--;
@@ -77,17 +72,3 @@ char	**ft_strsplit(char const *s, char c)
 	tab[j] = 0;
 	return (tab);
 }
-/*
-int		main()
-{
-	char str[] = "sa*lut";
-	char **tab;
-	char *ptr;
-
-	ptr = str;
-	tab = ft_strsplit(str, '*');
-	while (*tab)
-		printf("%s ", *tab++);
-	return (0);
-}
-*/
