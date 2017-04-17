@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/12 09:57:04 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/14 10:58:35 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/17 13:29:34 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,13 @@
 
 void	*ft_memalloc(size_t size)
 {
-	void	**mem;
+	void	*mem;
 	size_t	i;
 
 	i = 0;
-	if (!(mem = (void **)malloc(sizeof(void *) * (size))))
+	if (!(mem = (void *)malloc(sizeof(void) * (size))))
 		return (NULL);
 	while (i < size)
-	{
-		mem[i] = 0;
-		i++;
-	}
+		*((char*)mem + i++) = 0;
 	return (mem);
 }
