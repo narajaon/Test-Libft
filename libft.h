@@ -6,7 +6,7 @@
 /*   By: narajaon <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/04/11 18:21:28 by narajaon          #+#    #+#             */
-/*   Updated: 2017/04/17 15:08:29 by narajaon         ###   ########.fr       */
+/*   Updated: 2017/04/20 14:11:41 by narajaon         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
+# include <fcntl.h>
 
 typedef struct	s_list
 {
@@ -44,8 +45,6 @@ int				ft_strncmp(const char *s1, const char *s2, size_t n);
 char			*ft_strcat(char *dest, const char *src);
 char			*ft_strncat(char *dest, const char *src, size_t nb);
 size_t			ft_strlcat(char *dst, const char *src, size_t size);
-int				ft_islower(int c);
-int				ft_isupper(int c);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -86,4 +85,12 @@ void			ft_lstdel(t_list **ast, void (*del)(void *, size_t));
 void			ft_lstadd(t_list **alst, t_list *new);
 void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
+
+int				ft_isc(char c, char to_find);
+int				ft_isnu(int n, int to_find);
+int				ft_islower(int c);
+int				ft_isupper(int c);
+int				ft_isspace(char c);
+int				ft_iseven(int nb);
+
 #endif
